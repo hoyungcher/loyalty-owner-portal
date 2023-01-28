@@ -3,12 +3,17 @@ import styles from "./Setup.module.css";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
+
+const Stamps = (props) => {
+    const stampArray = new Array(Number(props.numStamps)).fill(0);
+    console.log(stampArray);
+    return stampArray.map((stamp, index) => <div className={styles.stamp} key={index}></div>)
+}
+
 const Setup = () => {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [stampsToRedeem, setStampsToRedeem] = useState(0);
-
-
 
     return (
         <>
@@ -65,12 +70,24 @@ const Setup = () => {
                         <div className={styles.textContainer}>
                             <p className={styles.cardDescription}>{description}</p>
                         </div>
+                        <div className={styles.stampContainer}>
+                            <Stamps numStamps={stampsToRedeem}/>
+                        </div>
+                        <div className={styles.redeemButton}>
+                            Redeem reward
+                        </div>
                     </div>
                 </div>
+
             </div>
         </>
     )
 
 }
+
+
+
+
+
 
 export default Setup;

@@ -23,8 +23,8 @@
 .card {
     border: #000000 1px solid;
     width: 300px;
-    height: 480px;
-    text-align: center;
+    min-height: 480px;
+    
 }
 
 .cardTitle {
@@ -36,11 +36,40 @@
 .textContainer {
     margin-left: 20px;
     margin-right: 20px;
+    text-align: center;
 }
 
 .cardDescription {
     font-size: 12px;
     margin-left: 16px;
     margin-right: 16px;
+}
+
+.stamp {
+    display: flex;
+    background-color: grey;
+    height: 60px;
+    width: 60px;
+    margin: 12px;
+    border-radius: 50%;
+}
+
+.stampContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20;
+    
+}
+
+.redeemButton {
+    border: black 1px solid;
+    border-radius: 4px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
